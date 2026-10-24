@@ -1,0 +1,27 @@
+/* A typical "clean" dashboard stylesheet. */
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.toast {
+  transition: opacity 200ms ease-in;
+}
+
+.drawer {
+  transition: transform 300ms linear;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.badge--premium {
+  background: gold;
+}
+
+.marquee {
+  animation: scroll 20s linear infinite; /* continuous loop: allowed */
+}

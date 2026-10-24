@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en" data-wow-world="card-table">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wow UI</title>
+  <meta name="description" content="A zero-dependency kit and standard for interfaces built as art objects: one physical world per product, metal that catches the light, spring motion, and a linter that fails flat UI.">
+  <meta name="theme-color" content="#060507">
+  <meta property="og:title" content="Wow UI">
+  <meta property="og:description" content="Build the interface as an art object, not a layout. Kit, standard, linter and contact sheet. Zero dependencies.">
+  <meta property="og:image" content="https://mthburnsbarber-web.github.io/wow-ui/docs/contact-sheet.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@500;600;700&family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Michroma&display=swap">
+  <link rel="stylesheet" href="../kit/wow.css">
+  <link rel="stylesheet" href="../worlds/worlds.css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236d5012'/%3E%3Cstop offset='.5' stop-color='%23fff8de'/%3E%3Cstop offset='1' stop-color='%23c39431'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23060507'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='9' fill='url(%23g)'/%3E%3C/svg%3E">
+</head>
+<body class="wow-scene">
+  <div class="wow-rosette bg-rosette" data-wow-rosette='{"strands":28,"lobes":21,"lobes2":7,"rings":3}'></div>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="mark wow-leaf" href="#top">Wow UI</a>
+      <nav aria-label="Sections">
+        <a href="#kit">Kit</a>
+        <a href="#worlds">Worlds</a>
+        <a href="#springs">Springs</a>
+        <a href="#guilloche">Guilloché</a>
+        <a href="#lint">Lint</a>
+        <a href="#use">Use it</a>
+        <a class="gh wow-button wow-button--quiet" href="https://github.com/mthburnsbarber-web/wow-ui">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="top">
+    <!-- ============================================================ hero -->
+    <section class="hero">
+      <div>
+        <p class="eyebrow">An interface standard and kit</p>
+        <h1><span class="line wow-leaf">Build the interface</span><span class="line">as an art object,</span><span class="line">not a layout.</span></h1>
+        <p class="lede">Pick one physical world for the product and make every control an object in it. Metal that catches the light, springs instead of fades, every state designed. One CSS file, one JS module, no dependencies. Plus a linter that fails flat UI before it ships.</p>
+        <div class="cta">
+          <a class="wow-button" href="https://github.com/mthburnsbarber-web/wow-ui">Get the kit</a>
+          <a class="wow-button wow-button--quiet" href="https://github.com/mthburnsbarber-web/wow-ui/blob/main/STANDARD.md">Read the standard</a>
+        </div>
+        <div class="install" aria-label="Lint your project">
+          <code>npx github:mthburnsbarber-web/wow-ui lint src/</code>
+          <button class="wow-button wow-button--quiet" type="button" data-copy="npx github:mthburnsbarber-web/wow-ui lint src/" style="min-height:32px;padding:0 12px">Copy</button>
+        </div>
+
+        <div class="switcher">
+          <span class="switcher-label" id="switch-label">Toss a chip to change worlds</span>
+          <div class="chips" role="radiogroup" aria-labelledby="switch-label">
+            <div><button class="wow-chip" role="radio" aria-checked="true" aria-pressed="true" data-world="card-table" style="--wow-chip-edge:#b3122e" aria-label="Card table world"><span>♠</span></button><span class="chip-name">Cards</span></div>
+            <div><button class="wow-chip" role="radio" aria-checked="false" aria-pressed="false" data-world="console" style="--wow-chip-edge:#d9761c;--wow-chip-inlay:#e8e6e1" aria-label="Studio console world"><span>VU</span></button><span class="chip-name">Console</span></div>
+            <div><button class="wow-chip" role="radio" aria-checked="false" aria-pressed="false" data-world="blueprint" style="--wow-chip-edge:#1d4f9a;--wow-chip-inlay:#e2ecf7" aria-label="Blueprint world"><span>A1</span></button><span class="chip-name">Blueprint</span></div>
+            <div><button class="wow-chip" role="radio" aria-checked="false" aria-pressed="false" data-world="certificate" style="--wow-chip-edge:#1f7c57;--wow-chip-inlay:#efe7d1" aria-label="Bond certificate world"><span>№</span></button><span class="chip-name">Bond</span></div>
+            <div><button class="wow-chip" role="radio" aria-checked="false" aria-pressed="false" data-world="night-watch" style="--wow-chip-edge:#123a63;--wow-chip-inlay:#f3b46c" aria-label="Night watch world"><span>◐</span></button><span class="chip-name">Watch</span></div>
+            <div><button class="wow-chip" role="radio" aria-checked="false" aria-pressed="false" data-world="film-studio" style="--wow-chip-edge:#e4302b;--wow-chip-inlay:#f1efe9" aria-label="Film studio world"><span>●</span></button><span class="chip-name">Film</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage" id="stage" aria-live="polite">
+        <div class="wow-rosette" data-wow-rosette='{"size":640,"strands":30,"lobes":24,"lobes2":6}'></div>
+        <div class="stage-shadow"></div>
+
+        <!-- card table -->
+        <div class="face" data-face="card-table">
+          <div class="tilt-host" data-tilt-host>
+            <div class="wow-card wow-tilt wow-foil wow-glint hero-card" role="img" aria-label="Ace of spades playing card">
+              <div class="wow-card__index"><span>A</span><small>♠</small></div>
+              <div class="medallion"><div data-wow-rosette='{"size":300,"strands":34,"lobes":16,"lobes2":4,"rings":3,"ringGap":0.12}'></div><span class="spade">♠</span></div>
+              <div class="wow-card__index wow-card__index--end"><span>A</span><small>♠</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- console -->
+        <div class="face" data-face="console">
+          <div class="tilt-host" data-tilt-host>
+            <div class="faceplate wow-tilt wow-foil wow-glint" role="img" aria-label="Aluminium console faceplate with a VU meter">
+              <i class="screw" style="left:10px;top:10px;--r:20deg"></i><i class="screw" style="right:10px;top:10px;--r:70deg"></i>
+              <i class="screw" style="left:10px;bottom:10px;--r:120deg"></i><i class="screw" style="right:10px;bottom:10px;--r:-30deg"></i>
+              <div class="vu"><svg class="vu-scale" viewBox="0 0 200 120" aria-hidden="true"></svg><div class="needle" id="needle"></div><span class="vu-label">VU</span></div>
+              <div class="console-row">
+                <div class="knob" aria-hidden="true"></div>
+                <span class="engrave">MASTER · BUS A</span>
+                <span class="lamp" aria-hidden="true"></span>
+                <div class="knob" aria-hidden="true" style="transform:rotate(calc(-120deg + var(--wow-ty,.5) * 240deg))"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- blueprint -->
+        <div class="face" data-face="blueprint">
+          <div class="tilt-host" data-tilt-host>
+            <div class="sheet wow-tilt wow-glint" role="img" aria-label="Blueprint sheet with an isometric drawing">
+              <svg viewBox="0 0 300 215" aria-hidden="true">
+                <path class="ink dim" pathLength="1" d="M60 155 L150 110 L240 155"/>
+                <path class="ink" pathLength="1" d="M150 200 L60 155 L60 95 L150 140 Z"/>
+                <path class="ink" pathLength="1" d="M150 200 L240 155 L240 95 L150 140 Z"/>
+                <path class="ink" pathLength="1" d="M150 140 L240 95 L195 27.5 L105 72.5 Z"/>
+                <path class="ink" pathLength="1" d="M60 95 L150 140 L105 72.5 Z"/>
+                <path class="ink" pathLength="1" d="M92 171 L92 141 L114 152 L114 182"/>
+                <path class="ink" pathLength="1" d="M168 170 L168 150 L188 140 L188 160 Z"/>
+                <path class="ink" pathLength="1" d="M206 152 L206 132 L226 122 L226 142 Z"/>
+                <path class="ink dim" pathLength="1" d="M56 168 L146 213"/>
+                <text class="dimension" x="84" y="203" transform="rotate(26.6 84 203)">8.40</text>
+              </svg>
+              <div class="compass wow-metal">N</div>
+              <div class="title-block"><div>PROJECT<b>WOW-UI</b></div><div>SHEET<b>A-101</b></div><div>SCALE<b>1:50</b></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- certificate -->
+        <div class="face" data-face="certificate">
+          <div class="tilt-host" data-tilt-host>
+            <div class="bond wow-tilt wow-foil wow-glint" role="img" aria-label="Engraved bond certificate">
+              <div class="bond-border"></div>
+              <div class="bond-band bond-band--top" data-band></div>
+              <div class="bond-band bond-band--bottom" data-band></div>
+              <div class="bond-rosette" data-wow-rosette='{"size":300,"strands":44,"lobes":26,"lobes2":8,"rings":3,"amplitude":0.06}'></div>
+              <h3 class="bond-title">ONE HUNDRED</h3>
+              <div class="bond-value">100</div>
+              <div class="bond-no">No. <b>000127</b></div>
+              <div class="bond-seal wow-metal">SEAL<br>OF<br>ISSUE</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- night watch -->
+        <div class="face" data-face="night-watch">
+          <div class="tilt-host" data-tilt-host>
+            <div class="glass wow-tilt wow-foil" role="img" aria-label="Frosted glass radar panel">
+              <div class="radar"><div class="sweep"></div><i class="blip" style="--x:66%;--y:30%;--d:.6s"></i><i class="blip" style="--x:28%;--y:62%;--d:2.4s"></i></div>
+              <div class="watch-status"><span>Perimeter<br><b>All quiet</b></span><span style="text-align:right">Sample data<br><b>4 doors</b></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- film studio -->
+        <div class="face" data-face="film-studio">
+          <div class="tilt-host" data-tilt-host>
+            <div class="slate wow-tilt" role="img" aria-label="Film clapperboard slate">
+              <div class="beam"></div>
+              <div class="slate-top"></div>
+              <div class="slate-body">
+                <div class="wide">Production<b>WOW-UI</b></div>
+                <div>Roll<b>A7</b></div><div>Scene<b>12</b></div><div>Take<b>3</b></div>
+                <div class="wide"><span class="rec">Rolling</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ kit -->
+    <section class="block" id="kit">
+      <div class="block-head">
+        <p class="eyebrow">The kit, live</p>
+        <h2>Every control is an object. Every motion is a verb.</h2>
+        <p>Everything below is the real kit running in your browser: <code>kit/wow.css</code> and <code>kit/wow.js</code>. Tilt your phone, hover, tap. With Reduce Motion on, it all settles into quiet fades.</p>
+      </div>
+      <div class="grid">
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Toss · the chip button</h3>
+          <div class="live"><button class="wow-chip" id="talk" style="--wow-chip-size:96px" aria-label="Talk"><span id="talk-face">Talk</span></button></div>
+          <p>A button is a chip that flips like a tossed coin between its faces. <code>wow.toss(chip, { swap })</code></p>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Deal · a hand of cards</h3>
+          <div class="live">
+            <div class="hand" id="hand">
+              <div class="wow-card is-red" tabindex="0" role="button" aria-label="Play queen of hearts"><div class="wow-card__index"><span>Q</span><small>♥</small></div><div class="wow-card__pip">♥</div></div>
+              <div class="wow-card is-red" tabindex="0" role="button" aria-label="Play jack of diamonds"><div class="wow-card__index"><span>J</span><small>♦</small></div><div class="wow-card__pip">♦</div></div>
+              <div class="wow-card" tabindex="0" role="button" aria-label="Play king of clubs"><div class="wow-card__index"><span>K</span><small>♣</small></div><div class="wow-card__pip">♣</div></div>
+              <div class="wow-card" tabindex="0" role="button" aria-label="Play ace of spades"><div class="wow-card__index"><span>A</span><small>♠</small></div><div class="wow-card__pip">♠</div></div>
+            </div>
+          </div>
+          <div class="row" style="justify-content:space-between"><p>Suggestions fanned in your hand. Tap one to play it. <code>wow.deal(cards)</code></p><button class="wow-button wow-button--quiet" type="button" id="redeal" style="min-height:34px">Deal again</button></div>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Stack · a balance</h3>
+          <div class="live">
+            <div class="balance">
+              <div><div class="balance-num wow-leaf" id="balance">$120</div><span class="balance-cap">Credits · sample</span></div>
+              <div class="stack-host"><div class="wow-stack" id="stack"></div></div>
+            </div>
+          </div>
+          <div class="row" style="justify-content:space-between"><p>Chips drop in one by one, each with a click. <code>wow.stack(chips)</code></p><button class="wow-button wow-button--quiet" type="button" id="add-chips" style="min-height:34px">Add 3</button></div>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Shuffle · loading</h3>
+          <div class="live">
+            <div style="display:grid;justify-items:center;gap:18px">
+              <div class="wow-riffle" role="status" aria-label="Shuffling, loading">
+                <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i>
+              </div>
+              <span class="balance-cap">Shuffling the deck</span>
+            </div>
+          </div>
+          <p>Never a stock spinner. A riffle shuffle; the top card catches the light. <code>.wow-riffle</code></p>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Reveal · a code on the card back</h3>
+          <div class="live">
+            <div class="code-card">
+              <div class="wow-flip" id="code-flip">
+                <div class="wow-face front">
+                  <div data-wow-rosette='{"size":400,"strands":26,"lobes":12,"lobes2":5,"rings":3}'></div>
+                  <small>Enter the code <b style="color:var(--wow-metal-light)">7 2 1 4</b></small>
+                  <div class="wow-code" id="code">
+                    <input inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 1" autocomplete="one-time-code">
+                    <input inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 2">
+                    <input inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 3">
+                    <input inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 4">
+                  </div>
+                  <small id="code-msg" aria-live="polite" style="text-transform:none;letter-spacing:.02em;font-size:.8rem">Each digit lights gold</small>
+                </div>
+                <div class="wow-face wow-face--back back" style="display:grid;place-items:center;align-content:center;gap:8px">
+                  <strong>You're in.</strong><small>Dealt in. The wrong code shakes and goes cold.</small>
+                  <button class="wow-button wow-button--quiet" type="button" id="code-reset" style="min-height:32px;color:var(--wow-metal-shadow);box-shadow:inset 0 0 0 1px var(--wow-metal-shadow)">Again</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>A wrong code shakes and the gold cools to grey. The right one flips over. <code>wow.shake()</code> <code>wow.flip()</code></p>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Turn face-up · permissions</h3>
+          <div class="live">
+            <div class="perms">
+              <button class="perm" type="button" aria-pressed="false" aria-label="Microphone permission"><div class="wow-flip"><div class="wow-face"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Mic</div><div class="wow-face wow-face--back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Granted</div></div></button>
+              <button class="perm" type="button" aria-pressed="false" aria-label="Camera permission"><div class="wow-flip"><div class="wow-face"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg>Camera</div><div class="wow-face wow-face--back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg>Granted</div></div></button>
+              <button class="perm" type="button" aria-pressed="false" aria-label="Notifications permission"><div class="wow-flip"><div class="wow-face"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>Alerts</div><div class="wow-face wow-face--back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>Granted</div></div></button>
+            </div>
+          </div>
+          <p>Each granted permission turns face-up as a gold card. Tap to try it. <code>.wow-flip</code></p>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">The Joker · errors</h3>
+          <div class="live" style="place-items:stretch">
+            <div class="wow-joker" id="joker" role="alert">
+              <div class="wow-joker__mark">J</div>
+              <div>
+                <strong style="display:block;margin-bottom:4px">The microphone is off for this site.</strong>
+                <span style="font-size:.84rem;color:var(--wow-ink-dim)">Allow it from the lock icon in the address bar, then try again. Nothing was recorded.</span>
+                <div style="margin-top:12px"><button class="wow-button" type="button" id="joker-fix" style="min-height:36px">Try again</button></div>
+              </div>
+            </div>
+          </div>
+          <p>Never red text. The exact reason, in the world's language, with the fix one tap away. <code>.wow-joker</code></p>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Materials · one system</h3>
+          <div class="live">
+            <div class="swatches">
+              <div class="type-leaf wow-leaf">Gold leaf, never yellow</div>
+              <div class="swatch-metal wow-metal" aria-hidden="true"></div>
+              <div class="swatch-row" aria-hidden="true">
+                <i style="background:var(--wow-base)"></i><i style="background:var(--wow-base-2)"></i><i style="background:var(--wow-surface)"></i><i style="background:var(--wow-paper)"></i><i style="background:var(--wow-accent)"></i>
+              </div>
+              <hr class="wow-rule" style="width:100%;margin:6px 0 0">
+            </div>
+          </div>
+          <p>Lacquer, a three-stop metal with a highlight, engraved double rules, guilloché, key light, vignette, device-resolution grain.</p>
+        </article>
+
+        <article class="specimen wow-plate">
+          <h3 class="wow-leaf">Seal · confirmation</h3>
+          <div class="live">
+            <div style="display:grid;justify-items:center;gap:16px">
+              <div class="seal" id="seal" aria-hidden="true"><span>★</span></div>
+              <span class="balance-cap" id="seal-msg" aria-live="polite" style="text-transform:none;letter-spacing:.04em;font-size:.8rem;text-align:center">Nothing sealed yet</span>
+            </div>
+          </div>
+          <div class="row" style="justify-content:space-between"><p>Success is pressed into wax, not a green tick. <code>wow.springs.toss</code></p><button class="wow-button" type="button" id="seal-go" style="min-height:34px">Confirm</button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================ worlds -->
+    <section class="block" id="worlds">
+      <div class="block-head">
+        <p class="eyebrow">Same rules, different world</p>
+        <h2>Six worlds. One attribute.</h2>
+        <p>A world is a set of tokens: lacquer, metal, paper, key light, type. Put <code>data-wow-world</code> on any element and every surface inside re-skins at once. Click one to make it the page.</p>
+      </div>
+      <div class="worlds" id="world-grid"></div>
+    </section>
+
+    <!-- ============================================================ springs -->
+    <section class="block" id="springs">
+      <div class="block-head">
+        <p class="eyebrow">Nothing simply fades in</p>
+        <h2>Real springs, exported as CSS.</h2>
+        <p>The kit solves a damped spring exactly and returns a CSS <code>linear()</code> easing with its settle time. It takes the same two numbers as SwiftUI's <code>.spring(response:dampingFraction:)</code>, so the web screen and its native twin move the same.</p>
+      </div>
+      <div class="tool wow-plate">
+        <div class="controls">
+          <div class="control"><label for="resp">Response <output id="resp-out">0.62 s</output></label><input id="resp" type="range" min="0.15" max="1.6" step="0.01" value="0.62"></div>
+          <div class="control"><label for="damp">Damping fraction <output id="damp-out">0.72</output></label><input id="damp" type="range" min="0.2" max="1.6" step="0.01" value="0.72"></div>
+          <div class="copy-row"><button class="wow-button" type="button" id="spring-play">Play</button><button class="wow-button wow-button--quiet" type="button" id="spring-copy">Copy CSS</button><span class="toast" id="spring-toast" aria-live="polite"></span></div>
+          <pre class="snippet" id="spring-css"></pre>
+        </div>
+        <div>
+          <div class="curve-box"><svg id="curve" viewBox="0 0 400 230" role="img" aria-label="Spring curve"></svg></div>
+          <div class="lane" id="lane"><div class="wow-card" id="lane-card"><div class="wow-card__pip">♠</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ guilloche -->
+    <section class="block" id="guilloche">
+      <div class="block-head">
+        <p class="eyebrow">Banknote line work</p>
+        <h2>A guilloché generator.</h2>
+        <p>Sums of sine rings, offset in phase, like the engraving on a banknote. Deterministic SVG you can export. The kit uses it for the slowly turning rosette, card backs and certificate borders.</p>
+      </div>
+      <div class="tool wow-plate">
+        <div class="controls">
+          <div class="control"><label for="g-lobes">Lobes <output id="g-lobes-out">18</output></label><input id="g-lobes" type="range" min="3" max="40" step="1" value="18"></div>
+          <div class="control"><label for="g-lobes2">Counter-wave <output id="g-lobes2-out">5</output></label><input id="g-lobes2" type="range" min="0" max="16" step="1" value="5"></div>
+          <div class="control"><label for="g-strands">Strands <output id="g-strands-out">24</output></label><input id="g-strands" type="range" min="4" max="60" step="1" value="24"></div>
+          <div class="control"><label for="g-amp">Amplitude <output id="g-amp-out">0.07</output></label><input id="g-amp" type="range" min="0.01" max="0.14" step="0.005" value="0.07"></div>
+          <div class="control"><label for="g-rings">Rings <output id="g-rings-out">2</output></label><input id="g-rings" type="range" min="1" max="4" step="1" value="2"></div>
+          <div class="copy-row"><button class="wow-button" type="button" id="g-download">Download SVG</button><button class="wow-button wow-button--quiet" type="button" id="g-copy">Copy code</button><span class="toast" id="g-toast" aria-live="polite"></span></div>
+        </div>
+        <div class="guilloche-view" id="g-view" role="img" aria-label="Guilloché rosette preview"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================ lint -->
+    <section class="block" id="lint">
+      <div class="block-head">
+        <p class="eyebrow">The banned list, enforced</p>
+        <h2>A linter that fails flat UI.</h2>
+        <p><code>wow-lint</code> reads CSS, HTML, JSX, Vue, Svelte and SwiftUI and fails the build on the things the standard bans: stock spinners, plain fades, linear easing, flat grey borders, flat yellow "gold", controls that do nothing, icon buttons with no label, and motion with no Reduce Motion fallback.</p>
+      </div>
+      <pre class="terminal" id="lint-output"><span class="p">$</span> npx github:mthburnsbarber-web/wow-ui lint examples/flat
+<span class="d">examples/flat/SettingsView.swift:13:13  </span><span class="w">warn </span>  system-segmented   Unstyled segmented control. Make it an object from your world.
+<span class="d">examples/flat/SettingsView.swift:15:26  </span><span class="e">error</span>  stock-spinner      Stock spinner. Make loading an object from your world.
+<span class="d">examples/flat/SettingsView.swift:17:13  </span><span class="e">error</span>  silent-control     Control that does nothing. Say why it can&#x27;t act and offer the fix.
+<span class="d">examples/flat/SettingsView.swift:18:17  </span><span class="e">error</span>  flat-gold          Flat yellow gold. Metal is a three-stop gradient: var(--wow-metal).
+<span class="d">examples/flat/SettingsView.swift:20:9   </span><span class="e">error</span>  plain-fade         Plain fade. Give it a verb with a spring; fades are for Reduce Motion only.
+<span class="d">examples/flat/SettingsView.swift:20:9   </span><span class="e">error</span>  no-reduced-motion  Motion with no Reduce Motion fallback in any scanned file.
+<span class="d">examples/flat/SettingsView.swift:21:9   </span><span class="e">error</span>  linear-easing      Linear easing on one-shot motion. Use a spring: var(--wow-spring-*).
+<span class="d">examples/flat/styles.css:3:3            </span><span class="e">error</span>  flat-grey-border   Flat grey border. Use an engraved rule: .wow-plate, var(--wow-rule).
+<span class="d">examples/flat/styles.css:9:3            </span><span class="e">error</span>  plain-fade         Plain fade. Give it a verb with a spring; fades are for Reduce Motion only.
+<span class="d">examples/flat/styles.css:13:3           </span><span class="e">error</span>  linear-easing      Linear easing on one-shot motion. Use a spring: var(--wow-spring-*).
+<span class="d">examples/flat/styles.css:16:1           </span><span class="e">error</span>  plain-fade         Plain fade. Give it a verb with a spring; fades are for Reduce Motion only.
+<span class="d">examples/flat/styles.css:22:3           </span><span class="e">error</span>  flat-gold          Flat yellow gold. Metal is a three-stop gradient: var(--wow-metal).
+<span class="d">examples/flat/Toolbar.jsx:3:10          </span><span class="e">error</span>  flat-grey-border   Flat grey border. Use an engraved rule: .wow-plate, var(--wow-rule).
+<span class="d">examples/flat/Toolbar.jsx:4:24          </span><span class="e">error</span>  stock-spinner      Stock spinner. Make loading an object from your world.
+<span class="d">examples/flat/Toolbar.jsx:6:15          </span><span class="e">error</span>  silent-control     Control that does nothing. Say why it can&#x27;t act and offer the fix.
+<span class="d">examples/flat/Toolbar.jsx:7:7           </span><span class="e">error</span>  unlabeled-control  No accessible label. Every object needs a name.
+<span class="d">examples/flat/Toolbar.jsx:8:7           </span><span class="e">error</span>  silent-control     Control that does nothing. Say why it can&#x27;t act and offer the fix.
+
+17 problems (16 errors, 1 warning) in 3 files
+
+<span class="p">$</span> npx github:mthburnsbarber-web/wow-ui lint kit worlds demo
+6 files checked. Nothing flat.</pre>
+    </section>
+
+    <!-- ============================================================ use -->
+    <section class="block use" id="use">
+      <div class="block-head">
+        <p class="eyebrow">Use it</p>
+        <h2>For you, and for your AI.</h2>
+        <p>The standard is written to be pasted at the top of any UI task, for any AI. It also ships as a Claude Code skill.</p>
+      </div>
+      <div class="two">
+        <div class="wow-plate">
+          <h3 class="wow-leaf">In a page</h3>
+          <p>Copy <code>kit/</code> and one world, or load them from a CDN. No build step.</p>
+          <pre class="snippet">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mthburnsbarber-web/wow-ui@v1.0.0/kit/wow.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mthburnsbarber-web/wow-ui@v1.0.0/worlds/worlds.css"&gt;
+
+&lt;body class="wow-scene" data-wow-world="card-table"&gt;
+  &lt;div class="wow-card wow-tilt wow-foil wow-glint" data-wow-tilt&gt;…&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import * as wow from 'https://cdn.jsdelivr.net/gh/mthburnsbarber-web/wow-ui@v1.0.0/kit/wow.js';
+  wow.auto();
+&lt;/script&gt;</pre>
+        </div>
+        <div class="wow-plate">
+          <h3 class="wow-leaf">In Claude Code</h3>
+          <p>Install it as a skill. Every UI task loads the standard, uses the kit, and runs the linter and the contact sheet before calling it done.</p>
+          <pre class="snippet">git clone https://github.com/mthburnsbarber-web/wow-ui ~/.claude/skills/wow-ui</pre>
+          <p style="margin-top:16px">Any other agent: add one line to <code>AGENTS.md</code>.</p>
+          <pre class="snippet">Before any UI work, read and follow STANDARD.md from github.com/mthburnsbarber-web/wow-ui, then run `npx github:mthburnsbarber-web/wow-ui lint` on the changed files.</pre>
+        </div>
+      </div>
+      <div class="wow-plate" style="padding:28px;margin-top:22px">
+        <h3 class="wow-leaf" style="margin-bottom:18px">The ten rules</h3>
+        <ol class="rules">
+          <li><b>Choose one physical world</b> and make every element a real object in it. Materials, weight and light, not a palette.</li>
+          <li><b>One signature hero object</b>: touchable, tilts with the device, catches light, has weight, appears everywhere.</li>
+          <li><b>Every control is an object</b> from that world. A button is a chip. An error is the Joker.</li>
+          <li><b>Every motion is a verb</b>: deal, flip, toss, stack, shuffle, reveal. Springs and haptics, never a plain fade.</li>
+          <li><b>One material system</b> applied through tokens, so every screen changes at once.</li>
+          <li><b>Use the hardware</b>: gyroscope, haptics, audio-reactive visuals, GPU shaders for the big moments.</li>
+          <li><b>Design every state</b> as an object. No control silently does nothing.</li>
+          <li><b>Ship the craft</b>: device-resolution textures, 60 fps, Reduce Motion, Dynamic Type, labels on everything.</li>
+          <li><b>Be unmistakably yours.</b> No rotating asterisks, pulsing orbs or other AI products' signatures.</li>
+          <li><b>Judge it as one artwork</b>: a contact sheet of every screen, before and after, then a real device by hand.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Wow UI · MIT · Made by <a href="https://blacklabeltec.com/michael-barber">Michael Barber</a> at <a href="https://blacklabeltec.com/">Black Label Tec</a></span>
+      <span><a href="https://github.com/mthburnsbarber-web/wow-ui">Source on GitHub</a></span>
+    </div>
+  </footer>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

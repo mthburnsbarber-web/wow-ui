@@ -1,0 +1,133 @@
+/* worlds.css — six physical worlds as token sets. Put one on any element:
+ *   <html data-wow-world="console">   or   <section data-wow-world="blueprint">
+ * Every kit surface inside re-skins at once. Copy one block into your app if
+ * you only need one world. The default (no attribute) is card-table.
+ */
+
+@layer wow.tokens {
+  /* Card table at night: lacquer, felt, gold leaf, playing cards and chips. */
+  [data-wow-world="card-table"] {
+    --wow-base: #060507;
+    --wow-base-2: #121014;
+    --wow-surface: #0a2118;
+    --wow-surface-2: #0f3022;
+    --wow-paper: #f6efdf;
+    --wow-paper-ink: #17110f;
+    --wow-ink: #f3e9d2;
+    --wow-accent: #b3122e;
+    --wow-metal-shadow: #2a1d05;
+    --wow-metal-deep: #6d5012;
+    --wow-metal-mid: #c39431;
+    --wow-metal-light: #f1d27e;
+    --wow-metal-hi: #fff8de;
+    --wow-key: #ffd9a0;
+    --wow-key-strength: 17%;
+    --wow-radius: 16px;
+    --wow-font-display: "Cormorant Garamond", "Didot", "Bodoni 72", Georgia, serif;
+  }
+
+  /* Analog studio console: brushed aluminium, VU needles, valve amber. */
+  [data-wow-world="console"] {
+    --wow-base: #09090a;
+    --wow-base-2: #19191b;
+    --wow-surface: #1f1e1c;
+    --wow-surface-2: #2a2825;
+    --wow-paper: #d8d8d4;
+    --wow-paper-ink: #161616;
+    --wow-ink: #ece6da;
+    --wow-accent: #ff9330;
+    --wow-metal-shadow: #26272a;
+    --wow-metal-deep: #60636a;
+    --wow-metal-mid: #a5a9b0;
+    --wow-metal-light: #e0e3e8;
+    --wow-metal-hi: #ffffff;
+    --wow-key: #ffad5e;
+    --wow-key-strength: 14%;
+    --wow-radius: 10px;
+    --wow-font-display: "Michroma", "Eurostile", "Microgramma", system-ui, sans-serif;
+  }
+
+  /* Architect's blueprint and brass: drafting film, ink lines, brass instruments. */
+  [data-wow-world="blueprint"] {
+    --wow-base: #061024;
+    --wow-base-2: #0b1d3b;
+    --wow-surface: #0d2548;
+    --wow-surface-2: #123160;
+    --wow-paper: #e2ecf7;
+    --wow-paper-ink: #0b2a52;
+    --wow-ink: #d9e9ff;
+    --wow-accent: #ff5b38;
+    --wow-metal-shadow: #2c1f08;
+    --wow-metal-deep: #6c5220;
+    --wow-metal-mid: #b78f3e;
+    --wow-metal-light: #e7cb8c;
+    --wow-metal-hi: #fff3d3;
+    --wow-key: #a5d4ff;
+    --wow-key-strength: 13%;
+    --wow-radius: 4px;
+    --wow-font-display: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+
+  /* Engraved bond certificate: security paper, intaglio green, steel. */
+  [data-wow-world="certificate"] {
+    --wow-base: #040907;
+    --wow-base-2: #0d1813;
+    --wow-surface: #0f231a;
+    --wow-surface-2: #153024;
+    --wow-paper: #efe7d1;
+    --wow-paper-ink: #123a2b;
+    --wow-ink: #e8e3d0;
+    --wow-accent: #1f7c57;
+    --wow-metal-shadow: #1a2320;
+    --wow-metal-deep: #4c5955;
+    --wow-metal-mid: #93a29c;
+    --wow-metal-light: #d5dfdb;
+    --wow-metal-hi: #f6fffb;
+    --wow-key: #eaf4e6;
+    --wow-key-strength: 10%;
+    --wow-radius: 6px;
+    --wow-font-display: "Cormorant Garamond", "Didot", Georgia, serif;
+  }
+
+  /* The night watch: lantern copper, midnight glass, a radar sweep. */
+  [data-wow-world="night-watch"] {
+    --wow-base: #02050a;
+    --wow-base-2: #0a1320;
+    --wow-surface: #0c1a2b;
+    --wow-surface-2: #11243a;
+    --wow-paper: #dbe6f1;
+    --wow-paper-ink: #0c1a2b;
+    --wow-ink: #e3edf8;
+    --wow-accent: #ff5a48;
+    --wow-metal-shadow: #2a1406;
+    --wow-metal-deep: #6f3712;
+    --wow-metal-mid: #c8742e;
+    --wow-metal-light: #f3b46c;
+    --wow-metal-hi: #fff0d6;
+    --wow-key: #ffb347;
+    --wow-key-strength: 12%;
+    --wow-radius: 18px;
+    --wow-font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  }
+
+  /* The film studio: slate, projector light, record red. */
+  [data-wow-world="film-studio"] {
+    --wow-base: #070609;
+    --wow-base-2: #15121a;
+    --wow-surface: #1b1720;
+    --wow-surface-2: #241f2b;
+    --wow-paper: #f1efe9;
+    --wow-paper-ink: #111111;
+    --wow-ink: #f0ebe2;
+    --wow-accent: #e4302b;
+    --wow-metal-shadow: #1d1d21;
+    --wow-metal-deep: #54555b;
+    --wow-metal-mid: #9b9da5;
+    --wow-metal-light: #dbdde3;
+    --wow-metal-hi: #ffffff;
+    --wow-key: #ffcd86;
+    --wow-key-strength: 20%;
+    --wow-radius: 8px;
+    --wow-font-display: "Bebas Neue", "Oswald", Impact, sans-serif;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "wow-ui",
+  "version": "1.0.0",
+  "description": "Build the interface as an art object, not a layout. A standard, a zero-dependency CSS/JS kit, a linter that fails flat UI, and a contact-sheet tool.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "wow-ui": "./cli.mjs" },
+  "exports": {
+    ".": "./kit/wow.js",
+    "./kit/wow.js": "./kit/wow.js",
+    "./kit/wow.css": "./kit/wow.css",
+    "./worlds/worlds.css": "./worlds/worlds.css",
+    "./lint": "./tools/lint.mjs",
+    "./sheet": "./tools/sheet.mjs"
+  },
+  "files": ["cli.mjs", "kit/", "worlds/", "tools/lint.mjs", "tools/sheet.mjs", "STANDARD.md", "SKILL.md"],
+  "repository": { "type": "git", "url": "git+https://github.com/mthburnsbarber-web/wow-ui.git" },
+  "homepage": "https://mthburnsbarber-web.github.io/wow-ui/",
+  "keywords": ["design-system", "ui", "css", "animation", "spring", "linter", "guilloche", "claude-code", "skill", "design-tokens"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "build": "node tools/build.mjs",
+    "lint": "node cli.mjs lint kit worlds demo"
+  }
+}
