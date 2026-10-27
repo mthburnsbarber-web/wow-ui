@@ -4,9 +4,9 @@ Build the interface as an art object, not a layout.
 
 A written standard for interfaces that feel like real objects, the CSS and JavaScript kit that implements it, a linter that fails flat UI, and a contact-sheet tool for judging every screen as one artwork. Zero dependencies.
 
-**[Live demo](https://mthburnsbarber-web.github.io/wow-ui/demo/)** · [The standard](STANDARD.md) · [Install as a Claude Code skill](#for-your-ai)
+**[Live demo](https://mthburnsbarber-web.github.io/wow-ui/demo/)** · [The standard](STANDARD.md) · [Install as a skill for Claude Code or Codex](#for-your-ai)
 
-[![The Wow UI demo: an ace of spades with a guilloché medallion, tilting and catching the light](docs/hero.jpg)](https://mthburnsbarber-web.github.io/wow-ui/demo/)
+[![The Wow UI demo: an ace of spades with a guilloché medallion, tilting and catching the light](docs/hero.gif)](https://mthburnsbarber-web.github.io/wow-ui/demo/)
 
 ## Why
 
@@ -145,13 +145,14 @@ Options: `--out`, `--width`, `--height`, `--cols`, `--wait ms` (time for the pag
 
 ## For your AI
 
-The standard is written to be pasted at the top of any UI task. It also installs as a Claude Code skill: every UI task loads the standard, uses the kit, and runs the linter and the contact sheet before calling the work done.
+The standard is written to be pasted at the top of any UI task. It also installs as a skill for Claude Code and Codex: every UI task loads the standard, uses the kit, and runs the linter and the contact sheet before calling the work done.
 
 ```
-git clone https://github.com/mthburnsbarber-web/wow-ui ~/.claude/skills/wow-ui
+git clone https://github.com/mthburnsbarber-web/wow-ui ~/.claude/skills/wow-ui   # Claude Code
+git clone https://github.com/mthburnsbarber-web/wow-ui ~/.codex/skills/wow-ui    # Codex
 ```
 
-For Codex, Cursor and other agents, add one line to `AGENTS.md`:
+For Cursor and other agents, add one line to `AGENTS.md`:
 
 ```
 Before any UI work, read and follow STANDARD.md from github.com/mthburnsbarber-web/wow-ui, then run `npx github:mthburnsbarber-web/wow-ui lint` on the changed files.
